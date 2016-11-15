@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+-->
+
+<!-- ionic/angularjs js -->
+<script src="lib/ionic/js/ionic.bundle.js"></script>
+
+<!-- cordova script (this will be a 404 during development) -->
+<script src="cordova.js"></script>
+
+<!-- your app's js -->
+<script src="js/controllers.js"></script>
+</head>
+<body ng-app="starter" ng-controller="user">
+<div class="bar bar-header bar-dark">
+  <div class="buttons">
+    <a href="index.html"><i class="ion-chevron-left"></a></i>
+  </div>
+    <h1 class="title">Connexion</h1>
+</div>
+<form class="form-horizontal" name="registerForm" ng-submit="connexion()">
+<div class="list list-inset has-header">
+  <label class="item item-input">
+    <input type="text" placeholder="Pseudo" ng-model="user.pseudo">
+  </label>
+</div>
+<button class="button button-stable button-block" type="submit" ng-click="save(user)">Connexion</button>
+</body>
+</html>
